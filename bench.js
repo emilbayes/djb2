@@ -4,7 +4,7 @@ function djb2js (input) {
   var hash = 5381
 
   for (var i = 0; i < input.length; i++) {
-    hash += (hash << 5) + input[i]
+    hash = hash + ((hash << 5) + input[i] | 0) | 0;
   }
 
   return hash
@@ -14,7 +14,7 @@ function djb2js_xor (input) {
   var hash = 5381
 
   for (var i = 0; i < input.length; i++) {
-    hash += (hash << 5) ^ input[i]
+    hash = hash + ((hash << 5) ^ input[i]) | 0;
   }
 
   return hash
