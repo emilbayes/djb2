@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "nanoassert": "^1.1.0"
+  },
+  "devDependencies": {
+    "wat2js": "^1.1.1"
+  }
+}
